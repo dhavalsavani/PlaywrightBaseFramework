@@ -1,0 +1,28 @@
+{
+  "name": "playwrightbaseframework",
+  "version": "1.0.0",
+  "description": "Base UI automation framework structure based of Playwright and Node JS",
+  "main": "index.js",
+  "scripts": {
+    "tests": "npx playwright test",
+    "lint:check": "eslint --format=table --max-warnings 0 \"**/*.js\"",
+    "lint:fix": "npm run lint:check -- --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-webpack": "^0.13.1",
+    "eslint-plugin-cucumber": "^1.4.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.20.2",
+    "run-func": "^2.1.0",
+    "xlsx": "^0.18.5"
+  }
+}

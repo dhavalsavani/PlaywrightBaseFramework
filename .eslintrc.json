@@ -1,0 +1,81 @@
+{
+  "env": {
+    "es2021": true,
+    "page": true
+  },
+  "globals": {
+    "page": "writable",
+    "envConfig": "writable"
+  },
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "import/no-unresolved": [
+      0
+    ],
+    "import/no-extraneous-dependencies": 0,
+    "no-multi-assign": [
+      "error",
+      {
+        "ignoreNonDeclaration": true
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "no-useless-escape": "warn",
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-param-reassign": 0,
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_unused"
+        ]
+      }
+    ],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTernary": true
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-await-in-loop": 0,
+    "prefer-destructuring": 0
+  },
+  "settings": {
+    "import/no-unresolved": "off"
+  }
+}
