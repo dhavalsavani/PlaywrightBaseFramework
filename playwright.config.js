@@ -1,4 +1,5 @@
-// @ts-check
+const { devices } = require('@playwright/test');
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -53,27 +54,25 @@ const config = {
   projects: [
     /* Test against branded browsers. */
     {
-      name: 'Google Chrome',
-      use: {
-        channel: 'chrome'
-      },
+      name: 'chrome',
+      use: { channel: 'chrome' },
     },
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: {
-    //     channel: 'msedge',
-    //   },
-    // },
+    {
+      name: 'edge',
+      use: { channel: 'msedge' },
+    },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'safari',
+      use: { ...devices['Desktop Safari'] },
+    },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
   outputDir: 'src/reports/artifacts/',
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   port: 3000,
-  // },
 };
 
 module.exports = config;
